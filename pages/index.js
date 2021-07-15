@@ -23,6 +23,33 @@ function ProfileSideBar(props) {
   )
 }
 
+
+
+function ProfileRelationsBox(props) {
+  return (
+    <ProfileRelationsBoxWrapper>
+    <h2 className="smallTitle">{props.title} ({props.itens}) </h2>
+    {/* <ul>
+       {seguidores.map((itemAtual) => {
+           return (
+             <li key={itemAtual}>
+             <a href={`https://github.com/${itemAtual}.png`} >
+               <img src={itemAtual.image} />
+               <span>{itemAtual.title}</span>
+             </a>
+             </li>
+           )
+       }) }
+       </ul> */}
+
+    </ProfileRelationsBoxWrapper>
+  )
+}
+
+
+
+
+
 export default function Home() {
   const gitHubUser = "alecod"
 
@@ -43,6 +70,18 @@ export default function Home() {
         'marcobrunodev',
         'felipefialho' 
 ]
+
+  const seguidores = ['']
+
+  React.useEffect(function() {
+    fetch('https://api.github.com/users/alecod/followers')
+    .then(function (respostaDoServidor){
+      return respostaDoServidor.json()
+    })
+    .then(function(respostaCompleta) {
+        console.log(respostaCompleta)
+    })
+  })
 
   return (
     <>
@@ -108,7 +147,12 @@ export default function Home() {
         style={{
           gridArea: "profileRelationsArea",
         }}
-      >
+      > 
+        <ProfileRelationsBox title="seguidores" itens={seguidores} />
+  
+
+
+
        <ProfileRelationsBoxWrapper>
        <h2 className="smallTitle">Comunidades {comunidades.length} </h2>
        <ul>
