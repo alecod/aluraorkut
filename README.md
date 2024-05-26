@@ -1,6 +1,6 @@
 # aluraOrkut
 
-![aluraOrkut](<img src="https://i.ibb.co/7JDV2f2/aluraorkut.png" alt="aluraorkut" border="0">)
+![aluraOrkut](https://i.ibb.co/7JDV2f2/aluraorkut.png)
 
 Uma recriação estática da interface do Orkut usando Styled Components, React, JavaScript e a API do GitHub.
 
