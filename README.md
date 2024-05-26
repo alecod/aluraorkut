@@ -1,8 +1,6 @@
-
-```markdown
 # aluraOrkut
 
-![aluraOrkut](link_para_uma_imagem.png)
+![aluraOrkut](/aluraorkut/public/aluraorkut.PNG)
 
 Uma recriação estática da interface do Orkut usando Styled Components, React, JavaScript e a API do GitHub.
 
